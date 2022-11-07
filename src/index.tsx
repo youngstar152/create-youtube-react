@@ -4,6 +4,7 @@ import {BrowserRouter} from "react-router-dom";
 import {RootRouter} from "./Route"
 
 import {createTheme,CssBaseline,ThemeProvider} from "@material-ui/core";
+import GlobalStyle from "./GlobalStyle";
 
 const theme=createTheme();
 ReactDOM.render(
@@ -11,6 +12,8 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
     <BrowserRouter>
       <CssBaseline />
+      <GlobalStyle/>
+      
       <RootRouter />
     </BrowserRouter>
     </ThemeProvider>

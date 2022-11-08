@@ -3,13 +3,15 @@ import {HomeLayout} from "./layouts/Home";
 import {SideLessHomeLayout} from "./layouts/SideLessHome";
 import {SimpleLayout} from "./layouts/Simple";
 import {Home} from "./pages/Home";
+import { Upload } from "./pages/Upload";
 import {Watch} from "./pages/Watch";
 
 export const RootRouter=()=>{
     return useRoutes([
         {
             element:<HomeLayout />,
-            children: [{path:"/",element:<Home/>}],
+            children: [{path:"/",element:<Home/>},
+        {path:"upload",element:<Upload/>},],
         },
         {
             element:<SideLessHomeLayout />,
